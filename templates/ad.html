@@ -1,0 +1,202 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel</title>
+  <link href="https://boxicons.com/static/svg/regular/bx-broadcast.svg" rel="icon" type="image/png" />
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
+body {
+	margin-bottom: 23px;
+	white-space: normal !important;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+}
+
+body {
+  background-image: url('../static/img/1.png');
+  margin: 0;
+  white-space: pre;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background .2s;
+}
+
+.header {
+    width: auto;
+    height: 70px;
+    line-height: 35px;
+    background: rgb(0 0 0 / 24%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 15;
+    border-bottom: 1px solid rgb(255 255 255 / 14%);
+    box-shadow: none;
+    padding-left: 10px;
+}
+
+span {
+  color: rgb(255 255 255 / 65%);
+}
+
+.segment {
+  margin-top: 20px;
+  height: 400px;
+  padding: 10px;
+  border-radius: 15px;
+  background: rgb(0 0 0 / 24%);
+}
+
+button {
+  padding: 10px 14px;
+  border-radius: 15px;
+  background: rgb(0 0 0 / 25%);
+  color: white;
+  font-size: 1.3em;
+  border: black;
+  margin-top: 30px;
+}
+
+button:hover {
+  padding: 10px 14px;
+  border-radius: 15px;
+  background: rgb(0 0 0 / 30%);
+  color: rgb(204, 204, 204);
+  font-size: 1.3em;
+  border: black;
+}
+
+button:active {
+  padding: 9px 13px;
+  border-radius: 15px;
+  background: rgb(0 0 0 / 40%);
+  color: white;
+  font-size: 1.3em;
+  border: black;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  max-height: 293px;
+  padding: 14px 14px;
+  border-radius: 15px;
+  background: rgb(0 0 0 / 20%);
+  color: white;
+  font-size: 1.3em;
+  border: black;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+b {
+  font-weight: bolder;
+}
+
+.container {
+  margin-top: 90px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bx {
+  font-size: 30px;
+}
+
+h3 {
+  width: 90%;
+  display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+  h3 {
+    width: 80%;
+  }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  width: 70%;
+  height: 40%;
+  top: 15%;
+  left: 15%;
+  padding: 10px;
+  border-radius: 15px;
+  background: rgb(0 0 0 / 99%);
+}
+
+.popup-btn {
+  cursor: pointer;
+}
+
+#emoji-button {
+  font-size: 25px;
+  display: inline-block;
+  margin-top: -195px;
+  margin-left: 95%;
+}
+</style>
+<div class="header">
+  <h2><a href="/"><b>Bot</b></a> <span>></span> Ad </h2>
+</div>
+{% if authenticated %}
+<div class="container">
+  <div class="segment">
+    <form action="/send">
+      <h3>Текст рекламы:</h3><i class='bx bx-help-circle popup-btn' onclick="open_popup()"></i>
+      <textarea name="text" placeholder="Реклама ..."></textarea><div id="emoji-button"></div>
+      <br>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
+<div class="popup">
+  <h3>Доступные html теги:</h3>
+  <p>&lt;b>bold&lt;/b>, &lt;strong>bold&lt;/strong> - жирный текст</p>
+  <p>&lt;i>italic&lt;/i>, &lt;em>italic&lt;/em> - курсив</p>
+  <p>&lt;a href="https://example.com">inline URL&lt;/a> - ссылка</p>
+  <p>&lt;a href="tg://user?id=123456789">inline mention of a user&lt;/a> - упоминание</p>
+</div>
+<script>
+  function open_popup() {
+    if (document.querySelector('.popup').style.display == 'none') {
+      document.querySelector('.popup').style.display = 'block'
+    } else if (document.querySelector('.popup').style.display == 'block') {
+      document.querySelector('.popup').style.display = 'none'
+    } else {
+      document.querySelector('.popup').style.display = 'block'
+    }
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/emoji-button@0.6.0/dist/index.min.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    EmojiButton(document.querySelector('#emoji-button'), function (emoji) {
+      document.querySelector('input').value += emoji;
+    });
+  });
+</script>
+{% else %}
+<div class="container">
+  <a href="/login"><div class="segment">
+    <h3>Войдите чтобы продолжить</h3> <i class='bx bx-log-in bx-tada-hover'></i>
+  </div></a>
+</div>
+{% endif %}
+</body>
+</html>

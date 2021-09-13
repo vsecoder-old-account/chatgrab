@@ -1,0 +1,21 @@
+13-09-2021 12:46: - BOT:[INFO] - Bot starting
+13-09-2021 12:46: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+13-09-2021 12:46: - BOT:[ERROR] - Error: Cannot find any entity corresponding to "Тест"
+13-09-2021 12:46: - BOT:[INFO] - Bot stoping
+13-09-2021 12:46: - BOT:[INFO] - Bot starting
+13-09-2021 12:46: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+13-09-2021 12:47: - BOT:[ERROR] - Error: Cannot find any entity corresponding to "Тест"
+13-09-2021 12:51: - BOT:[INFO] - New user ID:1226124193 Евгений
+13-09-2021 12:58: - BOT:[INFO] - Bot stoping
+13-09-2021 12:58: - BOT:[INFO] - Bot starting
+13-09-2021 12:58: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+13-09-2021 12:59: - BOT:[ERROR] - Error: (unicode error) 'unicodeescape' codec can't decode bytes in position 1-2: truncated \uXXXX escape (app.py, line 38)
+13-09-2021 12:59: - BOT:[INFO] - Bot stoping
+13-09-2021 13:00: - BOT:[INFO] - Bot starting
+13-09-2021 13:00: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+13-09-2021 13:01: - BOT:[INFO] - Bot stoping
+13-09-2021 13:01: - BOT:[INFO] - Bot starting
+13-09-2021 13:01: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+13-09-2021 13:03: - BOT:[INFO] - Bot stoping
+13-09-2021 13:03: - BOT:[INFO] - Bot starting
+13-09-2021 13:03: - WEB:[INFO] - Web starting in 0.0.0.0:5000

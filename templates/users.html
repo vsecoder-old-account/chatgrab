@@ -1,0 +1,235 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel</title>
+  <link href="https://boxicons.com/static/svg/solid/bxs-book.svg" rel="icon" type="image/png" />
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
+body {
+	margin-bottom: 23px;
+	white-space: normal !important;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+}
+
+body {
+  background-image: url('../static/img/1.png');
+  margin: 0;
+  white-space: pre;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background .2s;
+}
+
+.header {
+    width: auto;
+    height: 70px;
+    line-height: 35px;
+    background: rgb(0 0 0 / 24%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 15;
+    border-bottom: 1px solid rgb(255 255 255 / 14%);
+    box-shadow: none;
+    padding-left: 10px;
+}
+
+span {
+  color: rgb(255 255 255 / 65%);
+}
+
+table {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 15px;
+  background: rgb(0 0 0 / 24%);
+  border-collapse: collapse;
+}
+
+.ower {
+  overflow-x: auto;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+b {
+  font-weight: bolder;
+}
+
+.container {
+  margin-top: 90px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bx {
+  font-size: 30px;
+}
+
+h3 {
+  width: 90%;
+  display: inline-block;
+}
+
+.tablehead {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+
+td, th {
+  text-align: left;
+  padding: 24px 14px;
+}
+
+th {
+  justify-content: center;
+}
+
+.user:hover {
+  background: rgb(0 0 0 / 25%);
+}
+
+@media screen and (max-width: 600px) {
+  h3 {
+    width: 80%;
+  }
+}
+
+input {
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.24);
+  color: white;
+  border: white;
+  border-radius: 7px;
+  width: 50%;
+}
+
+button {
+  color: white;
+  background: rgba(0, 0, 0, 0.24);
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+button:hover {
+  background: rgba(0, 0, 0, 0.50);
+}
+
+button:active {
+  background: rgba(0, 0, 0, 0.99);
+}
+
+.searching {
+  display: flex;
+  align-items: center;
+}
+
+</style>
+<div class="header">
+  <h2><a href="/"><b>Bot</b></a> <span>></span> Users </h2>
+</div>
+{% if authenticated %}
+<div class="container">
+    <div class="searching">
+      <input type="text" placeholder="Поиск..." id="input">
+      <button><i class='bx bx-search-alt' onclick="javascript: FindOnPage('text-to-find',true); return false;" id="sss"></i></button>
+    </div>
+    <div class="ower"><table id="table">
+      <tr class="tablehead">
+        <th>ID</th>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Username</th>
+        <th>data</th>
+        <th>Первый запуск</th>
+      </tr>
+      {% for user in users %}
+        <tr class="user" onclick="window.location.pathname = '/user/{{ user.id }}'">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.fullname }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.data }}</td>
+            <td>{{ user.work }}</td>
+        </tr></a>
+      {% endfor %}
+    </table></div>
+</div>
+<script>
+var input,search,pr,result,result_arr, locale_HTML, result_store;
+
+function func() {
+ 	locale_HTML = document.body.innerHTML;
+}
+setTimeout(func, 1000);
+
+function FindOnPage(name, status) {
+	input = document.querySelector('#input').value;
+	
+	if(input.length<3&&status==true)
+	{
+		alert('Для поиска вы должны ввести три или более символов');
+		function FindOnPageBack() { document.body.innerHTML = locale_HTML; }
+	}
+	
+	if(input.length>=3)
+	{
+		function FindOnPageGo() {
+
+			search = '/'+input+'/g';
+			pr = document.body.innerHTML;
+			result = pr.match(/>(.*?)</g);
+			result_arr = [];
+
+			var warning = true;
+			for(var i=0;i<result.length;i++) {
+				if(result[i].match(eval(search))!=null) {
+					warning = false;
+				}
+			}
+			if(warning == true) {
+				alert('Не найдено ни одного совпадения');
+			}
+
+			for(var i=0; i<result.length;i++) {
+				result_arr[i] = result[i].replace(eval(search), '<span style="background: rgba(0, 0, 0, 0.24);">'+input+'</span>'); //находим нужные элементы, задаем стиль и сохраняем в новый массив
+			}
+			for(var i=0; i<result.length;i++) {
+				pr=pr.replace(result[i],result_arr[i])
+			}
+			document.body.innerHTML = pr;
+		}
+	}
+	function FindOnPageBack() { document.body.innerHTML = locale_HTML; }
+	if(status) { FindOnPageBack(); FindOnPageGo(); }
+	if(!status) { FindOnPageBack(); }
+}
+</script>
+{% else %}
+<div class="container">
+  <a href="/login"><div class="segment">
+    <h3>Войдите чтобы продолжить</h3> <i class='bx bx-log-in bx-tada-hover'></i>
+  </div></a>
+</div>
+{% endif %}
+</body>
+</html>

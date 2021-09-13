@@ -1,0 +1,81 @@
+11-09-2021 13:35: - BOT:[INFO] - Bot starting
+11-09-2021 13:35: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 13:36: - BOT:[INFO] - Bot stoping
+11-09-2021 13:36: - BOT:[INFO] - Bot starting
+11-09-2021 13:36: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 13:37: - BOT:[INFO] - Bot stoping
+11-09-2021 13:37: - BOT:[INFO] - Bot starting
+11-09-2021 13:37: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 13:38: - BOT:[INFO] - Bot stoping
+11-09-2021 13:38: - BOT:[INFO] - Bot starting
+11-09-2021 13:38: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 13:39: - BOT:[INFO] - Bot stoping
+11-09-2021 13:39: - BOT:[INFO] - Bot starting
+11-09-2021 13:39: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 13:40: - BOT:[INFO] - Bot stoping
+11-09-2021 13:41: - BOT:[INFO] - Bot starting
+11-09-2021 13:41: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 13:44: - BOT:[INFO] - Bot stoping
+11-09-2021 14:21: - BOT:[INFO] - Bot starting
+11-09-2021 14:21: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 14:21: - WEB:[INFO] - Page: "/" | 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Page: "/login" | 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Page: "/login" | 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Admin login: 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Page: "/" | 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Page: "/login" | 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Page: "/login" | 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Admin login: 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Page: "/" | 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Page: "/users" | 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Page: "/" | 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Page: "/ad" | 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Page: "/" | 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Page: "/logs" | 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Page: "/logs" | 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Page: "/" | 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Page: "/settings" | 192.168.99.11
+11-09-2021 14:21: - WEB:[INFO] - Page: "/" | 192.168.99.11
+11-09-2021 14:23: - BOT:[ERROR] - Error: dump_all_participants() missing 1 required positional argument: 'text'
+11-09-2021 14:27: - BOT:[INFO] - Bot stoping
+11-09-2021 14:27: - BOT:[INFO] - Bot starting
+11-09-2021 14:27: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 14:29: - BOT:[INFO] - Bot stoping
+11-09-2021 14:29: - BOT:[INFO] - Bot starting
+11-09-2021 14:29: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 14:30: - BOT:[INFO] - Bot stoping
+11-09-2021 14:30: - BOT:[INFO] - Bot starting
+11-09-2021 14:30: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 14:30: - BOT:[ERROR] - Error: 'int' object is not iterable
+11-09-2021 14:33: - BOT:[INFO] - Bot stoping
+11-09-2021 14:33: - BOT:[INFO] - Bot starting
+11-09-2021 14:33: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 14:33: - BOT:[ERROR] - Error: 'int' object is not iterable
+11-09-2021 14:33: - BOT:[INFO] - Bot stoping
+11-09-2021 14:33: - BOT:[INFO] - Bot starting
+11-09-2021 14:33: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 14:34: - BOT:[INFO] - Bot stoping
+11-09-2021 14:34: - BOT:[INFO] - Bot starting
+11-09-2021 14:34: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 14:38: - BOT:[INFO] - Bot stoping
+11-09-2021 14:39: - BOT:[INFO] - Bot starting
+11-09-2021 14:39: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 14:39: - BOT:[ERROR] - Error: no such column: version
+11-09-2021 14:42: - BOT:[INFO] - Bot stoping
+11-09-2021 14:42: - BOT:[INFO] - Bot starting
+11-09-2021 14:42: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 14:42: - BOT:[INFO] - Bot stoping
+11-09-2021 15:00: - BOT:[INFO] - Bot starting
+11-09-2021 15:00: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 15:00: - BOT:[ERROR] - Error: Cannot cast InputPeerUser to any kind of InputChannel.
+11-09-2021 15:01: - BOT:[INFO] - Bot stoping
+11-09-2021 15:01: - BOT:[INFO] - Bot starting
+11-09-2021 15:01: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 15:03: - BOT:[INFO] - Bot stoping
+11-09-2021 15:25: - BOT:[INFO] - Bot starting
+11-09-2021 15:25: - WEB:[INFO] - Web starting in 0.0.0.0:5000
+11-09-2021 15:25: - WEB:[INFO] - Page: "/users" | 192.168.99.11
+11-09-2021 15:25: - WEB:[INFO] - Page: "/login" | 192.168.99.11
+11-09-2021 15:25: - WEB:[INFO] - Page: "/login" | 192.168.99.11
+11-09-2021 15:25: - WEB:[INFO] - Admin login: 192.168.99.11
+11-09-2021 15:25: - WEB:[INFO] - Page: "/" | 192.168.99.11
